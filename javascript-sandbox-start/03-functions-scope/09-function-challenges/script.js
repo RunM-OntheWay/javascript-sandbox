@@ -14,10 +14,10 @@ const minMax = (arr) => {
 console.log(minMax([1, 2, 3, 4, 5]));
 
 // Challenge 3
-(function (len, wid) {
+((len, wid)=>{
 	console.log(
 		`The area of a rectangle with a length of ${len} and a width of ${wid} is ${
 			len * wid
 		}.`
 	);
-})(10, 5);
+})(10, 6);
