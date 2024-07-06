@@ -1,0 +1,29 @@
+// Quik
+function createListItem(item) {
+	const li = document.createElement('li');
+	li.innerHTML = `${item}<button class="remove-item btn-link text-red">
+    <i class="fa-solid fa-xmark"></i>
+  </button>`;
+
+	document.querySelector('.items').appendChild(li);
+}
+
+//Clean
+function createNewItem(item) {
+	const li = document.createElement('li');
+
+	const button = document.createElement('button');
+	button.className = 'remove-item btn-link text-red';
+
+	const icon = document.createElement('i');
+	icon.className = 'fa-solid fa-xmark';
+
+	li.appendChild(document.createTextNode(item));
+	li.appendChild(button);
+	button.appendChild(icon);
+
+	document.querySelector('.items').appendChild(li);
+}
+
+createListItem('Egg');
+createNewItem('Cheese');

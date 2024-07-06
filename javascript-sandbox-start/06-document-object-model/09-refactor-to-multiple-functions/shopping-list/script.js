@@ -1,17 +1,29 @@
 function createNewItem(item) {
-  const li = document.createElement('li');
-  li.appendChild(document.createTextNode(item));
+	const li = document.createElement('li');
+	li.appendChild(document.createTextNode(item));
 
-  const button = document.createElement('button');
-  button.className = 'remove-item btn-link text-red';
+	const button = createButton('remove-itme btn-link text-red');
+	li.appendChild(button);
 
-  const icon = document.createElement('i');
-  icon.className = 'fa-solid fa-xmark';
+	document.querySelector('.items').appendChild(li);
+}
 
-  button.appendChild(icon);
-  li.appendChild(button);
+function createButton(classes) {
+	const button = document.createElement('button');
+	button.className = classes;
 
-  document.querySelector('.items').appendChild(li);
+	const icon = createIcon('fa-solid fa-xmark');
+
+	button.appendChild(icon);
+
+	return button;
+}
+function createIcon(classes) {
+	const icon = document.createElement('i');
+	icon.className = classes;
+
+	return icon;
 }
 
 createNewItem('Cheese');
+createNewItem('Sause');
