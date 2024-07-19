@@ -1,0 +1,35 @@
+body{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  min-height: 600px;
+}
+
+.center-app{
+  width: 50%; /* Adjust the width as needed */
+  height: 50%; /* Adjust the height as needed */
+  text-align: center;
+  border: 2px solid black;
+}
+
+.flex-2col{
+  display: flex;
+  height: 60%;
+}
+
+.flex-2col-child{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure content within the child div does not overflow */
+}
+
+.flex-2col-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
